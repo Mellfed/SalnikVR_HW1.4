@@ -62,14 +62,17 @@ print("Что бы выпало число 5 понадобилось \(countIte
  ## Задание 4
   На 10 метровый столб лезет черепашка. За день она забирается на два метра, за ночь съезжает на один. Определите при помощи цикла, через сколько дней она заберетсья на столб. Подумайте над тем, какой цикл использовать в этой ситуации.
  */
+
 var columnLength = 10
 var daysToReachTop = 0
 let moveAtDay = 2
 let moveAtNight = 1
 
 while columnLength > 0 {
-    columnLength += moveAtNight
     columnLength -= moveAtDay
+    if columnLength > 0 {
+        columnLength += moveAtNight
+    }
     daysToReachTop += 1
 }
 print("Черепашка заберётся на столб через \(daysToReachTop) дней")
